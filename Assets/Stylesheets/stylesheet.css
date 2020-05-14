@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #FFAE00;
+    --secondary-color: #F56600;
+    --contrast-color-dark: #1A1100;
+    --contrast-color-light: #F5F5F5;
+    --tint-color: #FCFCFC;
+    --primary-gradient: linear-gradient(111deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
