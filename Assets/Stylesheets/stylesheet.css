@@ -5,15 +5,115 @@
     --contrast-color-light: #F5F5F5;
     --tint-color: #FCFCFC;
     --primary-gradient: linear-gradient(111deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --contrast-color-dark-seethrough: #1A110070;
+    --contrast-color-dark-hidden: #1A110000;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Jost';
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
     min-height: 100vh;
     margin: 0;
     background-color: var(--contrast-color-light);
+}
+
+/* General styling */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primary-gradient);
+    width: 100vw;
+    margin-top: -80px;
+    margin-bottom: 40px;
+    padding-top: 280px;
+    overflow: auto;
+    text-align: center;
+    color: white;
+}
+
+header > * {
+    margin: 0;
+}
+
+header > h1 {
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+a.active {
+    font-weight: 500;
+}
+
+a.active * {
+    font-weight: 500;
+}
+
+/* Components */
+
+html:not([data-scroll='0']) div#Header {
+    background-color: var(--contrast-color-dark-seethrough);
+    transition-duration: 0.5s;
+}
+
+html:not([data-scroll='0']) div#Header:hover {
+    background-color: var(--contrast-color-dark);
+    transition-duration: 0.2s;
+}
+
+div#Header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--contrast-color-dark-hidden);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+div#Header nav {
+    display: flex;
+}
+
+div#Header nav > * {
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    margin-right: 20px;
+    opacity: 0.5;
+}
+
+div#Header nav > *:last-child {
+    margin-right: 0;
+}
+
+div#Header nav > *:hover {
+    opacity: 1;
+}
+
+div#Header nav > *.active {
+    opacity: 1;
+} 
+
+/* Home specific */
+
+.home header {
+    height: 920px;
+}
+
+/* Portfolio specific */
+
+.portfolio header {
+    height: 460px;
 }
