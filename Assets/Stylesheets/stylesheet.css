@@ -24,6 +24,7 @@ body {
 }
 
 /* General styling */
+
 header {
     display: flex;
     flex-direction: column;
@@ -34,6 +35,7 @@ header {
     margin-bottom: 40px;
     padding-top: 280px;
     overflow: auto;
+    text-align: center;
     color: white;
 }
 
@@ -103,6 +105,12 @@ div#Header nav > *:hover {
 div#Header nav > *.active {
     opacity: 1;
 } 
+
+/* Home specific */
+
+.home header {
+    height: 920px;
+}
 
 /* Portfolio specific */
 
