@@ -113,6 +113,35 @@ div#Header nav > *.active {
     opacity: 1;
 } 
 
+div#FilterList {
+    display: flex;
+}
+
+div#FilterList > * {
+    display: inline-block;
+    margin-right: 10px;
+    background: var(--primary-gradient);
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+div#FilterList > * > * {
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 2px;
+    background-color: var(--contrast-color-light);
+    border-radius: 4px;
+    font-size: 12.45pt;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+div#FilterList > *.active > * {
+    background: none;
+    color: var(--contrast-color-light);
+}
+
 /* Home specific */
 
 .home header {
