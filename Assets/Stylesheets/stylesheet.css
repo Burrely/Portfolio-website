@@ -48,6 +48,13 @@ header > h1 {
     margin-bottom: 40px;
 }
 
+main {
+    margin: auto;
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+}
+
 a.active {
     font-weight: 500;
 }
@@ -114,6 +121,11 @@ div#Header nav > *.active {
 
 /* Portfolio specific */
 
-.portfolio header {
-    height: 460px;
-}
+    /* Header*/
+
+    .portfolio header {
+        height: 460px;
+    }
+
+    /* Main */
+    
