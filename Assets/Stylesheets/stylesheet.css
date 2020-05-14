@@ -10,13 +10,16 @@
 * {
     box-sizing: border-box;
     font-family: 'Jost';
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
     margin: 0;
 }
 
-/**/
+/* General styling */
 
 header {
     background: var(--primary-gradient);
@@ -24,16 +27,49 @@ header {
     margin-top: -80px;
 }
 
+a.active {
+    font-weight: 500;
+}
+
+a.active * {
+    font-weight: 500;
+}
+
+/* Components */
+
 div#Header {
     display: flex;
     position: sticky;
+    top: 0;
     width: 100vw;
     height: 80px;
     padding: 0 40px;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--contrast-color-dark);
+    color: white;
 }
+
+div#Header nav {
+    display: flex;
+}
+
+div#Header nav > * {
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    margin-right: 20px;
+}
+
+div#Header nav > *:last-child {
+    margin-right: 0;
+}
+
+div#Header nav > *:hover {
+    opacity: 0.5;
+}
+
+div#Header nav > *.active:hover {
+    opacity: 1;
+} 
 
 /* Portfolio specific */
 
