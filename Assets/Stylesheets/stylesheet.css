@@ -203,6 +203,45 @@ a.active * {
             transform: translateY();
         }
 
+        /* Article tags list */
+
+        section#Articles > article section.tagsList {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: hidden;
+        }
+
+        section#Articles > article section.tagsList > * {
+            display: flex;
+            align-items: center;
+            height: 23px;
+            margin-right: 10px;
+            transition-property: transform;
+            transition-duration: 0.2s;
+            border-radius: 6px;
+            background: var(--primary-gradient);
+            font-weight: 500;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+    
+        section#Articles > article section.tagsList > * > * {
+            margin: 2px;
+            padding: 2.835px 10px;
+            transition-property: background-color;
+            transition-duration: 0.2s;
+            background-color: var(--contrast-color-light);
+            border-radius: 4px;
+            font-size: 7pt;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+    
+        section#Articles > article section.tagsList > *:hover > * {
+            background-color: var(--contrast-color-light-seethrough);
+        }
+
 /* Home specific */
 
 .home header {
