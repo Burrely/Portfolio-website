@@ -8,6 +8,8 @@
     --contrast-color-dark-seethrough: #1A110070;
     --contrast-color-dark-hidden: #1A110000;
     --contrast-color-light-seethrough: #f5f5f5e6;
+    --tint-color-hidden: #FCFCFC00;
+    --tint-fade-out-gradient: linear-gradient(0deg, var(--tint-color) 0%, var(--tint-color-hidden) 100%);
     --drop-shadow-color: #e6ecf8bf;
 }
 
@@ -180,6 +182,7 @@ a.active * {
     }
 
     section#Articles > article {
+        position: relative;
         height: 320px;
         width: 520px;
         margin-bottom: 40px;
@@ -189,6 +192,21 @@ a.active * {
         border-radius: 6px 6px 0 0;
         background-color: var(--tint-color);
         box-shadow: 0 6px 5px var(--drop-shadow-color);
+    }
+
+    section#Articles > article::after {
+        display: block;
+        content: "";
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        background-image: var(--tint-fade-out-gradient);
+    }
+
+    section#Articles > article > * {
+        margin: 0;
+        margin-bottom: 10px;
     }
 
         /* Article header image */
