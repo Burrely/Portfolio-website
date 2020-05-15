@@ -234,7 +234,7 @@ a.active * {
             padding: 3.75px 10px;
             transition-property: background-color;
             transition-duration: 0.2s;
-            background-color: var(--contrast-color-light);
+            background-color: var(--tint-color);
             border-radius: 5px;
             font-size: 7pt;
             font-weight: 500;
