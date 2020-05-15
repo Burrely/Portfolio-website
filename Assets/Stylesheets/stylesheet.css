@@ -230,12 +230,12 @@ a.active * {
         }
     
         section#Articles > article section.tagsList > * > * {
-            margin: 2px;
-            padding: 2.835px 10px;
+            margin: 1px;
+            padding: 3.75px 10px;
             transition-property: background-color;
             transition-duration: 0.2s;
             background-color: var(--contrast-color-light);
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 7pt;
             font-weight: 500;
             color: var(--primary-color);
