@@ -81,6 +81,7 @@ div#Header {
     background-color: var(--contrast-color-dark-hidden);
     transition-property: background-color;
     transition-duration: 0.5s;
+    z-index: 100;
 }
 
 div#Header nav {
