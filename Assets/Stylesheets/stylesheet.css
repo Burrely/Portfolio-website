@@ -183,6 +183,8 @@ a.active * {
         height: 320px;
         width: 520px;
         margin-bottom: 40px;
+        padding: 20px;
+        padding-top: 0;
         overflow: hidden;
         border-radius: 6px 6px 0 0;
         background-color: var(--tint-color);
@@ -192,8 +194,9 @@ a.active * {
         /* Article header image */
 
         section#Articles > article > div.headerImage {
-            width: 100%;
+            width: calc(100% + 40px);
             height: 80px;
+            margin: 0 0px 6px -20px;
             margin-bottom: 6px;
             overflow: hidden;
         }
