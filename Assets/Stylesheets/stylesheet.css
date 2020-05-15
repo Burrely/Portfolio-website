@@ -85,7 +85,7 @@ a.active * {
         background-color: var(--contrast-color-dark);
         transition-duration: 0.2s;
     }
-
+    
     div#Header {
         display: flex;
         position: sticky;
@@ -99,6 +99,7 @@ a.active * {
         background-color: var(--contrast-color-dark-hidden);
         transition-property: background-color;
         transition-duration: 0.5s;
+        z-index: 100;
     }
 
     div#Header nav {
