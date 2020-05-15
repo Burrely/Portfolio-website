@@ -64,6 +64,11 @@ a.active * {
     font-weight: 500;
 }
 
+.hint {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
 /* Components */
 
 html:not([data-scroll='0']) div#Header {
@@ -155,6 +160,10 @@ div#FilterList > *:hover > * {
 div#FilterList > *.active > * {
     background: none;
     color: var(--contrast-color-light);
+}
+
+#FilterText {
+    margin-bottom: 20px;
 }
 
 /* Home specific */
