@@ -189,6 +189,20 @@ a.active * {
         box-shadow: 0 6px 5px var(--drop-shadow-color);
     }
 
+        /* Article header image */
+
+        section#Articles > article > div.headerImage {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 6px;
+            overflow: hidden;
+        }
+
+        section#Articles > article > div.headerImage > img {
+            width: 100%;
+            transform: translateY();
+        }
+
 /* Home specific */
 
 .home header {
