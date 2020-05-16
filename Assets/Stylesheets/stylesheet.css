@@ -194,23 +194,11 @@ a.active * {
         border-radius: 6px 6px 0 0;
         background-color: var(--tint-color);
         box-shadow: 0 6px 5px var(--drop-shadow-color);
-        transition-duration: 1s;
+        transition-duration: .35s;
     }
 
     section#Articles > article:hover {
         transform: rotateX(2deg) translateZ(14px);
-    }
-
-    section#Articles > article .content {
-        transition-duration: 1s;
-        height: 181px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        cursor: pointer;
-    }
-    
-    section#Articles > article:hover .content {
-        filter: blur(1px) opacity(0.15);
     }
 
     section#Articles > article::after {
@@ -228,11 +216,11 @@ a.active * {
         position: absolute;
         content: "Klik om meer te lezen!";
         width: calc(100% - 40px);
-        top: 160px;
+        top: 280px;
         text-align: center;
         font-size: 18pt;
         opacity: 0;
-        transition-duration: 1s;
+        transition-duration: .35s;
     }
 
     section#Articles > article:hover::before {
@@ -317,6 +305,20 @@ a.active * {
     
         section#Articles > article section.tagsList > *:hover > * {
             background-color: var(--contrast-color-light-seethrough);
+        }
+
+        /* Articles content */
+
+        section#Articles > article .content {
+            transition-duration: .35s;
+            height: 181px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        section#Articles > article:hover .content {
+            filter: blur(1px) opacity(0.15);
         }
 
 /* Home specific */
