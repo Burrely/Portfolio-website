@@ -85,7 +85,7 @@ a.active * {
         background-color: var(--contrast-color-dark);
         transition-duration: 0.2s;
     }
-    
+
     div#Header {
         display: flex;
         position: sticky;
@@ -180,6 +180,7 @@ a.active * {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        perspective: 500px;
     }
 
     section#Articles > article {
@@ -193,6 +194,23 @@ a.active * {
         border-radius: 6px 6px 0 0;
         background-color: var(--tint-color);
         box-shadow: 0 6px 5px var(--drop-shadow-color);
+        transition-duration: 1s;
+    }
+
+    section#Articles > article:hover {
+        transform: rotateX(2deg) translateZ(14px);
+    }
+
+    section#Articles > article .content {
+        transition-duration: 1s;
+        height: 181px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    section#Articles > article:hover .content {
+        filter: blur(1px) opacity(0.15);
     }
 
     section#Articles > article::after {
@@ -205,10 +223,46 @@ a.active * {
         background-image: var(--tint-fade-out-gradient);
     }
 
-    section#Articles > article > * {
+    section#Articles > article::before {
+        display: block;
+        position: absolute;
+        content: "Klik om meer te lezen!";
+        width: calc(100% - 40px);
+        top: 160px;
+        text-align: center;
+        font-size: 18pt;
+        opacity: 0;
+        transition-duration: 1s;
+    }
+
+    section#Articles > article:hover::before {
+        display: block;
+        position: absolute;
+        content: "Klik om meer te lezen!";
+        width: calc(100% - 40px);
+        top: 160px;
+        text-align: center;
+        font-size: 18pt;
+        opacity: 1;
+    }
+
+    section#Articles > article > *,
+    section#Articles > article > section.content > *  {
         margin: 0;
         margin-bottom: 10px;
     }
+
+    section.content > h1,
+    section.content > h2,
+    section.content > h3 {
+        font-weight: 500;
+    }
+
+    section.content > h1 {
+        font-size: 15.5pt;
+    }
+
+
 
         /* Article header image */
 
