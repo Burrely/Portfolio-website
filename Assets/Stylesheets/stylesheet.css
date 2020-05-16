@@ -321,6 +321,12 @@ a.active * {
             filter: blur(1px) opacity(0.15);
         }
 
+
+        section#Articles > article.active > div.headerImage {
+            width: calc(100% + 360px);
+            height: 166px;
+            margin: 0 0 20px -180px;
+        }
 /* Home specific */
 
 .home header {
