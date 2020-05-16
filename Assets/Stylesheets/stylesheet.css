@@ -301,28 +301,36 @@ a.active * {
 
         /* Articles content */
 
-        section#Articles > article .content {
-            transition-duration: .35s;
-            height: 181px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        
-        section#Articles > article:hover .content {
-            filter: blur(1px) opacity(0.15);
-        }
+            section#Articles > article .content {
+                transition-duration: .35s;
+                height: 181px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            
+            section#Articles > article:hover .content {
+                filter: blur(1px) opacity(0.15);
+            }
 
-        section.content > h1,
-        section.content > h2,
-        section.content > h3 {
-            font-weight: 500;
-        }
+            /* Text */
 
-        section.content > h1 {
-            font-size: 15.5pt;
-        }
+            section.content > h1,
+            section.content > h2,
+            section.content > h3 {
+                font-weight: 500;
+            }
 
+            section.content > h1 {
+                font-size: 15.5pt;
+            }
+            
+            section#Articles > article .content h2 {line-height: 1.67;
+                background-image: var(--primary-gradient);
+                color: var(--tint-color);
+                text-align: center;
+                box-shadow: 0 6px 5px var(--drop-shadow-color);
+            }
 
             /* Figure */
 
