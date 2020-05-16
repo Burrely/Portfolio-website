@@ -198,7 +198,7 @@ a.active * {
     }
 
     section#Articles > article:hover {
-        transform: rotateX(2deg) translateZ(14px);
+        transform: scale(1.05);
     }
 
     section#Articles > article::after {
