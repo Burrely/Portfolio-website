@@ -348,6 +348,12 @@ a.active * {
                 text-align: center;
             }
 
+            /* List */
+            
+            section#Articles > article .content ul li {
+                margin-bottom: 10px;
+            }
+
         /* Active article */
         
         section#Articles > article.active {
