@@ -67,6 +67,18 @@ a.active * {
     font-weight: 500;
 }
 
+main a {
+    color: var(--primary-color);
+}
+
+main a:hover {
+    color: var(--contrast-color-dark);
+}
+
+main a:visited {
+    color: var(--secondary-color);
+}
+
 .hint {
     color: var(--secondary-color);
     margin: 0;
