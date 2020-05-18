@@ -10,10 +10,19 @@ class ArticleHander {
     assignActivation() {
         Array.from(this.articles).forEach(article => {
             article.onclick = () => {
+                this.deactivateAllArticles();
                 article.classList.add("active");
             }
         });
     }
+
+    deactivateAllArticles() {
+        if (!this.articles) { return; }
+        Array.from(this.articles).forEach(article => {
+            article.classList.remove("active");
+        });
+    }
+
 }
 
 const articleHandler = new ArticleHander();
