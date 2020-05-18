@@ -12,6 +12,9 @@ class ArticleHander {
             article.onclick = () => {
                 this.deactivateAllArticles();
                 article.classList.add("active");
+                document.onclick = (event) => { // NEEDS REVISION, OVERIDES ANY OTHER EVENTS.
+                    if (!article.contains(event.target)) { articleHandler.deactivateAllArticles(); }
+                };
             }
         });
     }
