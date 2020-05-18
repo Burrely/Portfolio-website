@@ -1,19 +1,24 @@
 class ArticleHander {
-    #articles;
+    articles;
     constructor() {}
-
-    get articles() {
-        return this.#articles;
-    }
 
     //
     getDocumentArticles() {
-        this.#articles = document.getElementsByTagName("article");
+        this.articles = document.getElementsByTagName("article");
+    }
+
+    assignActivation() {
+        Array.from(this.articles).forEach(article => {
+            article.onclick = () => {
+                article.classList.add("active");
+            }
+        });
     }
 }
 
 const articleHandler = new ArticleHander();
 
 window.addEventListener('load', () => {
-
+    articleHandler.getDocumentArticles();
+    articleHandler.assignActivation();
 })
