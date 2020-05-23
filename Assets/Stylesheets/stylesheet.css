@@ -186,6 +186,48 @@ main a:visited {
         margin-bottom: 20px;
     }
 
+    /* Spoilers */
+
+    .spoiler {
+        display: block;
+        position: relative;
+        width: 100%;
+        border-top: 1px solid var(--contrast-color-dark);
+    }
+
+    .spoiler::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-color: var(--tint-color);
+        border: 1px solid var(--contrast-color-dark);
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .spoiler::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .spoiler div.content {
+        overflow: hidden;
+        height: 0;
+    }
+
+    .spoiler.active div.content {
+        height: 100%;
+    }
+
     /* Articles */
 
     section#Articles {
@@ -316,14 +358,14 @@ main a:visited {
 
         /* Articles content */
 
-            section#Articles > article .content {
+            section#Articles > article section.content {
                 transition-duration: .35s;
                 margin-bottom: 20px;
                 overflow: hidden;
                 cursor: pointer;
             }
             
-            section#Articles > article:hover .content {
+            section#Articles > article:hover section.content {
                 filter: blur(1px) opacity(0.15);
             }
 
@@ -343,7 +385,7 @@ main a:visited {
                 font-size: 15.5pt;
             }
             
-            section#Articles > article .content h2 {
+            section#Articles > article section.content h2 {
                 line-height: 1.67;
                 background-image: var(--primary-gradient);
                 color: var(--tint-color);
@@ -357,26 +399,26 @@ main a:visited {
 
             /* Figure */
 
-            section#Articles > article .content figure img {
+            section#Articles > article section.content figure img {
                 width: 100%;
                 margin-bottom: 10px;
                 box-shadow: 0 6px 5px var(--drop-shadow-color);
             }
 
-            section#Articles > article .content figure iframe {
+            section#Articles > article section.content figure iframe {
                 width: 100%;
                 height: 420px;
                 margin-bottom: 10px;
                 box-shadow: 0 6px 5px var(--drop-shadow-color);
             }
 
-            section#Articles > article .content figure figcaption {
+            section#Articles > article section.content figure figcaption {
                 text-align: center;
             }
 
             /* List */
             
-            section#Articles > article .content ul li {
+            section#Articles > article section.content ul li {
                 margin-bottom: 10px;
             }
 
@@ -412,7 +454,7 @@ main a:visited {
             transform: rotateX(0) translateZ(0);
         }
 
-        section#Articles > article.active:hover .content {
+        section#Articles > article.active:hover section.content {
             filter: blur(0) opacity(1);
         }
 
