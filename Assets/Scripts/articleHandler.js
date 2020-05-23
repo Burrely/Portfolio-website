@@ -46,6 +46,9 @@ class ArticleHander {
                         targets: article,
                         height: ["320px", this.constructor.calculateArticleSize(article)],
                         easing: 'easeInOutQuad',
+                        complete: () => {
+                            article.style.height = "100%";
+                        }
                     });
                 }
             });
