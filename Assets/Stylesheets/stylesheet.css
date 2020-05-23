@@ -213,6 +213,7 @@ main a:visited {
         display: block;
         content: "";
         position: absolute;
+        pointer-events: painted;
         top: -10px;
         width: 100%;
         height: 20px;
