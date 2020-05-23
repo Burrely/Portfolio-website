@@ -191,7 +191,6 @@ main a:visited {
     .spoiler {
         display: block;
         position: relative;
-        pointer-events: none;
         width: 100%;
         height: 0;
         border-top: 1px solid var(--contrast-color-dark);
@@ -215,7 +214,6 @@ main a:visited {
         display: block;
         content: "";
         position: absolute;
-        pointer-events: painted;
         top: -10px;
         width: 100%;
         height: 20px;
@@ -223,6 +221,7 @@ main a:visited {
     }
 
     .spoiler div.content {
+        pointer-events: all;
         overflow: hidden;
         height: 100%;
     }
