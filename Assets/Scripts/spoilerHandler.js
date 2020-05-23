@@ -43,5 +43,15 @@ const spoilerHandler = new SpoilerHandler();
 
 window.addEventListener('load', () => {
 
+    Array.from(spoilerHandler.getSpoilers()).forEach( (spoiler) => {
+
+        spoiler.addEventListener('click', (event) => {
+            if(event.target == spoiler) {
+                SpoilerHandler.toggleSpoiler(spoiler);
+            }
+        });
+
+    });
+    
 });
 
