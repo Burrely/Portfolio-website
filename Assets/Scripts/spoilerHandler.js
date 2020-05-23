@@ -21,6 +21,7 @@ class SpoilerHandler {
                 duration: 500,
                 complete: () => {
                     element.classList.add("active");
+                    element.style.height = "100%";
                 }
             });
         } else {
