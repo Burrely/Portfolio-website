@@ -376,7 +376,8 @@ main a:visited {
 
             section.content h1,
             section.content h2,
-            section.content h3 {
+            section.content h3,
+            section.content h4 {
                 font-weight: 500;
             }
 
