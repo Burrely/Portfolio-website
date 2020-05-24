@@ -137,7 +137,7 @@ window.addEventListener('load', () => {
     var cube = new THREE.Mesh( geometry, material );
     scene3D.add( cube );
 
-    camera.position.z = 5;
+    camera.position.z = 1.5;
 
     var animate = function () {
         requestAnimationFrame( animate );
