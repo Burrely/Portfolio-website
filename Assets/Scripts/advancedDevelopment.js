@@ -118,6 +118,12 @@ window.addEventListener('load', () => {
 
     
     // Three.js, not the fourth dimension.
+
+    var threeJSCubeHuePos = 0;
+    function setThreeJSCubeHuePos(newValue) {
+        threeJSCubeHuePos = newValue%360; return threeJSCubeHuePos;
+    }
+
     var scene3D = new THREE.Scene();
     var containerElement = document.getElementById("ThreeJSExample");
     var camera = new THREE.PerspectiveCamera( 75, 640/320, 0.1, 1000 );
@@ -138,6 +144,7 @@ window.addEventListener('load', () => {
 
         cube.rotation.x += 0.01;
         cube.rotation.y += 0.01;
+        cube.material.color = new THREE.Color("hsl("+String(setThreeJSCubeHuePos(threeJSCubeHuePos+1))+", 100%, 50%)");
 
         renderer.render( scene3D, camera );
     };
