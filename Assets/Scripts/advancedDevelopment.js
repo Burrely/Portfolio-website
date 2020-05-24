@@ -126,10 +126,10 @@ window.addEventListener('load', () => {
 
     var scene3D = new THREE.Scene();
     var containerElement = document.getElementById("ThreeJSExample");
-    var camera = new THREE.PerspectiveCamera( 75, 640/320, 0.1, 1000 );
+    var camera = new THREE.PerspectiveCamera( 75, 320/320, 0.1, 1000 );
 
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize( 640, 320 );
+    var renderer = new THREE.WebGLRenderer({alpha: true});
+    renderer.setSize( 320, 320 );
     containerElement.appendChild( renderer.domElement );
 
     var geometry = new THREE.BoxGeometry();
